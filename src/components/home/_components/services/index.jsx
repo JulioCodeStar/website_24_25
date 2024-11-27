@@ -7,28 +7,47 @@ const features = [
   {
     Icon: FileTextIcon,
     name: "Prótesis de Miembro Inferior",
-    description: "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
+    description:
+      "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
     href: "/",
     cta: "Ver más",
-    background: <img src="https://placehold.co/600x600/png" className="absolute opacity-60" />,
+    background: (
+      <img
+        src="https://placehold.co/600x600/png"
+        className="absolute opacity-60"
+      />
+    ),
     className: "#",
   },
   {
     Icon: InputIcon,
     name: "Prótesis de Miembro Superior",
-    description: "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
+    description:
+      "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
     href: "#",
     cta: "Ver más",
-    background: <img src="https://placehold.co/600x600/png" alt="ms" className="absolute opacity-60" />,
+    background: (
+      <img
+        src="https://placehold.co/600x600/png"
+        alt="ms"
+        className="absolute opacity-60"
+      />
+    ),
     className: "",
   },
   {
     Icon: GlobeIcon,
     name: "Prótesis Estéticas",
-    description: "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
+    description:
+      "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
     href: "#",
     cta: "Ver más",
-    background: <img src="https://placehold.co/600x600/png" className="absolute opacity-60" />,
+    background: (
+      <img
+        src="https://placehold.co/600x600/png"
+        className="absolute opacity-60"
+      />
+    ),
     className: "¿",
   },
 ];
@@ -36,14 +55,14 @@ const features = [
 export default function Services() {
   return (
     <section className="bg-white py-28">
-      <div className="flex flex-col justify-center items-center gap-6 px-4 lg:px-[120px]">
+      <div className="max-w-[1320px] mx-auto flex flex-col justify-center items-center gap-6 px-6">
         <h5 className="text-2xl font-medium text-blue-600">
           Nuestros Servicios
         </h5>
-        <h1 className="text-2xl lg:text-5xl text-mons font-semibold leading-tight text-center pb-7">
+        <h1 className="text-3xl lg:text-5xl text-mons font-semibold leading-tight text-center pb-7">
           Ofrecemos Servicios según <br /> tus necesidades
         </h1>
-        <BentoGrid className="grid-cols-1 lg:grid-cols-3 gap-6">
+        <BentoGrid className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature) => (
             <BentoCard key={feature.name} {...feature} />
           ))}

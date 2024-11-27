@@ -19,28 +19,31 @@ export default function Header() {
   return (
     <>
       <HeaderBanner />
-      <section className="relative w-full">
+      <section className="relative w-full py-2 px-4 xl:py-5 xl:px-24">
         <HeaderBackground />
-        <div className="flex items-center justify-between gap-2 p-4 xl:px-24 xl:py-5">
+        <div className="max-w-[1320px] mx-auto flex items-center justify-between gap-4 p-4">
+          {/* Logo */}
           <img
             src="/img/encabezado.png"
             alt="Logo Principal"
             className="w-24 md:w-32"
           />
+
+          {/* Menú de Navegación para Pantallas Grandes */}
           <div className="hidden lg:flex items-center gap-4">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link href="#" legacyBehavior passHref>
+                  <Link href="/" legacyBehavior passHref>
                     <NavigationMenuLink
-                      className={`text-lg ${navigationMenuTriggerStyle()} `}
+                      className={`text-lg ${navigationMenuTriggerStyle()}`}
                     >
                       Inicio
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#" legacyBehavior passHref>
+                  <Link href="/nosotros" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={`${navigationMenuTriggerStyle()} text-[18px]`}
                     >
@@ -54,7 +57,7 @@ export default function Header() {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="flex w-full flex-wrap gap-8 p-6 bg-white rounded-lg shadow-md lg:w-[800px]">
-                      {/* Columna 1 - Use Cases */}
+                      {/* Columna 1 - Prótesis de Pierna */}
                       <div className="flex-1 min-w-[200px] p-2 border-r-2">
                         <Link href="#">
                           <h4 className="mb-4 text-lg font-semibold text-gray-800">
@@ -89,7 +92,7 @@ export default function Header() {
                         </ul>
                       </div>
 
-                      {/* Columna 2 - Teams */}
+                      {/* Columna 2 - Prótesis Biónicas */}
                       <div className="flex-1 min-w-[200px] p-2 border-r-2">
                         <Link href="#">
                           <h4 className="mb-4 text-lg font-semibold text-gray-800">
@@ -106,13 +109,13 @@ export default function Header() {
                               <span>Mano Parcial Biónicas</span>
                             </a>
                             <p className="text-sm text-gray-500">
-                              Integrate Strapi with your favorite tools
+                              Integrate Strapi with your favorite tools.
                             </p>
                           </li>
                         </ul>
                       </div>
 
-                      {/* Columna 3 - Industries */}
+                      {/* Columna 3 - Prótesis Estéticas */}
                       <div className="flex-1 min-w-[200px] p-2">
                         <Link href="#">
                           <h4 className="mb-4 text-lg font-semibold text-gray-800">
@@ -129,7 +132,7 @@ export default function Header() {
                               <span>Mano Completa Estéticas</span>
                             </a>
                             <p className="text-sm text-gray-500">
-                              Build trustful relations with your customers
+                              Build trustful relations with your customers.
                             </p>
                           </li>
                           <li>
@@ -153,7 +156,7 @@ export default function Header() {
                               <span>Prótesis de Oídos</span>
                             </a>
                             <p className="text-sm text-gray-500">
-                              Create and manage content on any platform
+                              Create and manage content on any platform.
                             </p>
                           </li>
                         </ul>
@@ -182,11 +185,15 @@ export default function Header() {
               </NavigationMenuList>
             </NavigationMenu>
           </div>
-          <div className="flex items-center gap-1">
-            <Button className="bg-device-600 hover:bg-device-500 rounded-full p-6">
-              Contáctenos
-            </Button>
 
+          {/* Botón de Contacto y Menú Móvil */}
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              className="hidden lg:block text-white bg-device-600 hover:bg-device-500 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2"
+            >
+              Contáctenos
+            </button>
             <MenuMobile />
           </div>
         </div>

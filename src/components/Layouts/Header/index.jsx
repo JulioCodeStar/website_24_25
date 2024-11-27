@@ -30,7 +30,7 @@ export default function Header() {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link href="#" legacyBehavior passHref>
+                  <Link href="/" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={`text-lg ${navigationMenuTriggerStyle()} `}
                     >
@@ -39,7 +39,7 @@ export default function Header() {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#" legacyBehavior passHref>
+                  <Link href="/nosotros" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={`${navigationMenuTriggerStyle()} text-[18px]`}
                     >

@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
   return (
     <footer className="w-full bg-device-950 text-white p-12 lg:px-36">
-      <div className="md:grid md:grid-cols-4 md:gap-8 h-auto">
+      <div className="max-w-[1320px] mx-auto md:grid md:grid-cols-4 md:gap-8 h-auto">
         {/* Primera columna: Logo y descripción */}
-        <div>
+        <div className="py-10 md:py-0">
           <img
             src="/img/kyp_blanco.svg"
             alt="Logo White"
@@ -21,16 +21,14 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center py-10 md:py-7">
-            <Button
-              className="bg-white text-[#2a2a2a] hover:bg-[#009ca6] hover:text-white px-4 py-3"
-            >
+            <Button className="bg-white text-[#2a2a2a] hover:bg-[#009ca6] hover:text-white px-4 py-3">
               <FaBook />
               <span className="ml-2">Libro de Reclamaciones</span>
             </Button>
           </div>
         </div>
 
-        {/* Segunda columna: Botón de Libro de Reclamaciones */}
+        {/* Segunda columna: Horarios */}
         <div className="py-10 md:py-0">
           <span className="font-bold text-white text-xl">Horarios</span>
           <ul className="space-y-2 text-white py-6">
@@ -69,7 +67,7 @@ export default function Footer() {
         </div>
 
         {/* Cuarta columna: Sedes */}
-        <div className="">
+        <div className="py-10 md:py-0">
           <span className="font-bold text-white text-xl">Sedes</span>
           <div className="text-white space-y-3 py-6">
             <div className="flex items-center space-x-2">
@@ -94,7 +92,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <hr className="w-auto my-6" />
+      <hr className="w-auto my-6 border-gray-600" />
 
       {/* Pie de página */}
       <div className="flex items-center justify-center text-white">

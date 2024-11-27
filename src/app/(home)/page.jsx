@@ -1,4 +1,10 @@
-import { AboutSection, ChooseSection, ProcessSection, ServicesSection } from "@/components/home";
+import { 
+  AboutSection, 
+  BlogSection, 
+  ChooseSection, 
+  ServicesSection, 
+  TestimonialsSection 
+} from "@/components/home";
 
 
 export default function Home() {
@@ -7,7 +13,8 @@ export default function Home() {
       <AboutSection />
       <ServicesSection /> 
       <ChooseSection />
-      <ProcessSection />
+      <TestimonialsSection />
+      <BlogSection />
     </>
   );
 }
