@@ -10,7 +10,7 @@ const features = [
     description: "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
     href: "/",
     cta: "Ver más",
-    background: <img src="https://placehold.co/600/png" className="absolute opacity-60" />,
+    background: <img src="https://placehold.co/600x600/png" className="absolute opacity-60" />,
     className: "#",
   },
   {
@@ -19,7 +19,7 @@ const features = [
     description: "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
     href: "#",
     cta: "Ver más",
-    background: <img src="https://placehold.co/600/png" alt="ms" className="absolute opacity-60" />,
+    background: <img src="https://placehold.co/600x600/png" alt="ms" className="absolute opacity-60" />,
     className: "",
   },
   {
@@ -28,7 +28,7 @@ const features = [
     description: "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
     href: "#",
     cta: "Ver más",
-    background: <img src="https://placehold.co/600/png" className="absolute opacity-60" />,
+    background: <img src="https://placehold.co/600x600/png" className="absolute opacity-60" />,
     className: "¿",
   },
 ];
