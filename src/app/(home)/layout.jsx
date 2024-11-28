@@ -11,14 +11,12 @@ export default function HomeLayout({ children }) {
   return (
     <main className="min-h-screen flex flex-col justify-between relative text-mons">
       {
-        isHome ? (
-          <HeaderHome />
-        ) : (
+        !isHome && (
           <Header />
         )
       }
       
-      <div className="flex-grow relative">{children}</div>
+        <div className="flex-grow">{children}</div>
       <Footer />
     </main>
   );

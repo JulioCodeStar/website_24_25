@@ -53,7 +53,7 @@ export default function About() {
             {items.map((item) => (
               <ul key={item.title} className="flex items-center gap-3">
                 <div className="flex justify-center items-center bg-white rounded-full h-8 w-8">
-                  <FaCheck className="text-device-900" />
+                  <FaCheck className="" />
                 </div>
                 <p>{item.title}</p>
               </ul>

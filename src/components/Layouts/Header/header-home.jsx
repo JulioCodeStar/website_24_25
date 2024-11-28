@@ -188,12 +188,9 @@ export default function Header() {
 
           {/* Botón de Contacto y Menú Móvil */}
           <div className="flex items-center gap-4">
-            <button
-              type="button"
-              className="hidden lg:block text-white bg-device-600 hover:bg-device-500 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2"
-            >
+            <Button className="bg-device-600 hover:bg-device-500 rounded-full p-6">
               Contáctenos
-            </button>
+            </Button>
             <MenuMobile />
           </div>
         </div>

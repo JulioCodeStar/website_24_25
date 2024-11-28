@@ -47,7 +47,7 @@ export default function MenuMobile() {
 
               {/* NOSOTROS (Enlace Directo) */}
 
-              <Link href="/" className="block px-3 py-2">
+              <Link href="/nosotros" className="block px-3 py-2">
                 NOSOTROS
               </Link>
 
@@ -153,7 +153,7 @@ export default function MenuMobile() {
 
               {/* CONTACTO (Enlace Directo) */}
 
-              <Link href="/" className="block px-3 py-2">
+              <Link href="/contactos" className="block px-3 py-2">
                 CONTACTO
               </Link>
             </Accordion>
