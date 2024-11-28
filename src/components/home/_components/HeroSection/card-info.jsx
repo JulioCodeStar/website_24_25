@@ -9,23 +9,23 @@ import { CiMedicalCase } from "react-icons/ci";
 const infos = [
   {
     Icon: <CiMedicalCase />,
-    title: "Qualified Doctor",
-    description: "Lorem ipsum dolor sit amet ctetur adipiscing",
+    title: "Apoyo Emocional",
+    description: "Brindamos apoyo emocional para facilitar la adaptación y fomentar la confianza en el uso de la prótesis.",
   },
   {
     Icon: <CiMedicalCase />,
-    title: "Emergency Help",
-    description: "Lorem ipsum dolor sit amet ctetur adipiscing",
+    title: "Atención Fisioterapéutica",
+    description: "Incluimos rehabilitación antes y después de la prótesis para mejorar la adaptación y la marcha de nuestros pacientes.",
   },
   {
     Icon: <CiMedicalCase />,
-    title: "Modern Equment",
-    description: "Lorem ipsum dolor sit amet ctetur adipiscing",
+    title: "Equipos de adaptación",
+    description: "Disponemos de equipos diseñados para mejorar la marcha, la adaptación y la confianza de los pacientes al practicar con sus prótesis.",
   },
   {
     Icon: <CiMedicalCase />,
-    title: "Family Medicine",
-    description: "Lorem ipsum dolor sit amet ctetur adipiscing",
+    title: "Sesiones programadas",
+    description: "Atendemos mediante citas para garantizar un servicio ordenado y de calidad durante el proceso de elaboración de prótesis.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function CardInfo() {
               </div>
             </CardHeader>
             <CardContent>
-              <h3 className="text-xl font-semibold">{info.title}</h3>
+              <h2 className="text-xl font-semibold">{info.title}</h2>
             </CardContent>
             <CardFooter>
               <p>{info.description}</p>

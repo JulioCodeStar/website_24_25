@@ -8,20 +8,17 @@ export default function HeroSections() {
       <section className="bg-transparent relative w-full py-20 flex justify-center flex-col items-center">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 max-w-[1320px] w-full">
           <div className="flex flex-col gap-2 lg:w-1/2 p-3 lg:text-left">
-            <div className="text-lg lg:text-xl text-blue-700 mb-4">
-              Transformamos Vidas con Tecnología Innovadora.
-            </div>
+            <h1 className="text-lg lg:text-xl text-blue-700 mb-4">
+              Ortesis y Prótesis a Medida en Lima, Perú
+            </h1>
             <h2 className="text-5xl lg:text-6xl font-bold">
-              Recupera{" "}
+              Recuperemos juntos{" "}
               <span className="underline leading-tight underline-offset-8 text-device-800 font-normal">
-                Tu Confianza
+              Tu confianza con una Prótesis
               </span>
-              .
             </h2>
             <p className="text text-gray-700 text-base mt-6 leading-relaxed">
-              Pariatur ad occaecat ullamco cillum aliquip in consequat qui sint
-              pariatur esse sunt reprehenderit in. Duis laborum fugiat in
-              officia esse ut.
+            La integración de diferentes especialidades en la elaboración de prótesis es fundamental para que nuestros pacientes puedan adaptarse mejor a su prótesis.
             </p>
             <Button className="w-2/5 mt-9 py-6 bg-blue-800 hover:bg-blue-600 rounded-full lg:mx-0">
               Contáctenos

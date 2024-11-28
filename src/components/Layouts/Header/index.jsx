@@ -170,7 +170,7 @@ export default function Header() {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#" legacyBehavior passHref>
+                  <Link href="/contactos" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={`${navigationMenuTriggerStyle()} text-[18px]`}
                     >

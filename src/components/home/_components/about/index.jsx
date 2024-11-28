@@ -3,20 +3,23 @@ import { FaCheck } from "react-icons/fa";
 
 const items = [
   {
-    title: "Ambulance Services",
+    title: "Personalización Total",
   },
   {
-    title: "Oxizen on Wheel",
+    title: "Materiales de Alta Calidad",
   },
   {
-    title: "Pharmacy on Clinic",
+    title: "Equipo Profesional Especializado",
   },
   {
-    title: "On duty Doctors",
+    title: "Tecnología Avanzada",
   },
   {
-    title: "24/7 Medical Emergency",
+    title: "Servicio Integral de Rehabilitación",
   },
+  {
+    title: "Atención Rápida y Eficiente",
+  }
 ];
 
 export default function About() {
@@ -36,28 +39,24 @@ export default function About() {
             Sobre Nosotros
           </h5>
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl lg:text-5xl text-mons font-semibold leading-relaxed">
-              Prótesis de Miembro Superiores e Inferiores
-            </h1>
-            <p className="text-mons font-medium">
-              Culpa cupidatat cupidatat mollit ut sit do non enim ex deserunt
-              fugiat deserunt.
-            </p>
+            <h2 className="text-3xl lg:text-5xl text-mons font-semibold leading-relaxed">
+              Somos el Primer Centro Ortoprotésico en Lima
+            </h2>
+            <h3 className="text-mons font-medium">
+              Ofrecemos servicios integrales de apoyo emocional y rehabilitación para optimizar el uso de tu prótesis.
+            </h3>
           </div>
           <p className="leading-snug text-[#676767] py-5">
-            Laboris exercitation qui ea cillum voluptate culpa elit. Est duis et
-            ea veniam aute velit consectetur mollit do laboris occaecat commodo
-            nostrud et. Dolor velit in nisi adipisicing proident. Elit aute eu
-            sunt sunt ipsum nisi occaecat.
+            Nos motiva ofrecer a las personas amputadas confianza, tranquilidad y una nueva oportunidad para avanzar con seguridad, a través de prótesis personalizadas que les devuelvan su independencia.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 text-mons font-medium">
             {items.map((item) => (
-              <div key={item.title} className="flex items-center gap-3">
+              <ul key={item.title} className="flex items-center gap-3">
                 <div className="flex justify-center items-center bg-white rounded-full h-8 w-8">
                   <FaCheck className="text-device-900" />
                 </div>
                 <p>{item.title}</p>
-              </div>
+              </ul>
             ))}
           </div>
         </div>
