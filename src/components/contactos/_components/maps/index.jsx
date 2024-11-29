@@ -54,12 +54,12 @@ export default function MapsSection() {
                     <CardDescription>{tab.descripcion}</CardDescription>
                   </CardHeader>
                   <CardContent className="p-0">
-                    <div className="aspect-w-16 aspect-h-9">
+                    <div className="aspect-w-16 h-80">
                       <iframe
                         src={tab.mapa}
                         className="w-full h-full"
                         style={{ border: 0 }}
-                        height={500}
+                        height={1000}
                         allowFullScreen={true}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"

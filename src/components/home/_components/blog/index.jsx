@@ -38,7 +38,7 @@ export default function BlogSection() {
       <div className="max-w-[1320px] mx-auto flex flex-col justify-center items-center gap-6 px-6">
         <h5 className="text-2xl font-medium text-blue-600">Nuestro Blog</h5>
         <h1 className="text-3xl lg:text-5xl text-mons font-semibold leading-tight text-center pb-7">
-          Artículos Recientes
+          Artículos recientes sobre prótesis y <br /> sus usuario
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">

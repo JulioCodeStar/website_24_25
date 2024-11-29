@@ -5,3 +5,5 @@ export { default as ServicesSection } from './_components/services';
 export { default as ChooseSection } from './_components/chooseSection';
 export { default as TestimonialsSection } from './_components/testimonials';
 export { default as BlogSection } from './_components/blog';
+export { default as TeamSection } from './_components/team';
+export { default as FaqsSection } from './_components/faqs';

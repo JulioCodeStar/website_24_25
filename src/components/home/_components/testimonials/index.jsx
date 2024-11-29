@@ -46,12 +46,12 @@ const secondRow = reviews.slice(reviews.length / 2);
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative flex w-full flex-col items-center gap-5 justify-center bg-transparent pt-[114px] pb-[100px] px-6">
+    <section className="relative flex w-full flex-col items-center gap-5 justify-center bg-[#F4F3F8] pt-[114px] pb-[100px] px-6">
       <div className="max-w-[1320px] w-full mx-auto flex flex-col items-center gap-5">
         <h5 className="text-2xl font-medium text-blue-600">Testimonios</h5>
-        <h1 className="text-3xl lg:text-5xl text-mons font-semibold leading-snug text-center pb-7">
-          Lo que nuestros clientes opinan
-        </h1>
+        <h2 className="text-3xl lg:text-5xl text-mons font-semibold leading-snug text-center pb-7">
+          Opiniones de nuestros clientes <br /> sobre su prótesis
+        </h2>
 
         <Marquee pauseOnHover className="w-full [--duration:20s]">
           {firstRow.map((review) => (

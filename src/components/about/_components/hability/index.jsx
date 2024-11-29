@@ -21,7 +21,7 @@ const items = [
   },
 ];
 
-export default function MisionVisionSection() {
+export default function HabilitySection() {
   const [process, setProcess] = useState(0);
 
   useEffect(() => {
@@ -31,14 +31,14 @@ export default function MisionVisionSection() {
 
   return (
     <section className="relative py-16 lg:py-28 bg-[#F4F3F8]">
-      <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 px-6 gap-8 lg:gap-12 items-center">
+      <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 px-8 gap-8 lg:gap-12 items-center">
         {/* Columna Izquierda - Habilidades */}
         <div className="space-y-8">
           <div className="flex flex-col gap-4">
             <h3 className="text-lg lg:text-2xl font-medium tracking-wider text-blue-700">
               Nuestra Área de Habilidades
             </h3>
-            <h2 className="mt-2 text-4xl font-bold text-mons lg:text-5xl">
+            <h2 className="mt-2  text-3xl font-bold text-mons lg:text-5xl">
               Nos Caracterizamos
               <br />
               Por Tener

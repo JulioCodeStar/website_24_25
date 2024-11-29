@@ -8,8 +8,8 @@ const features = [
     Icon: FileTextIcon,
     name: "Prótesis de Miembro Inferior",
     description:
-      "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
-    href: "/",
+      "Fabricamos prótesis personalizadas de alta tecnología para extremidades inferiores, garantizando máxima comodidad y movilidad en tu día a día. Cada prótesis se adapta perfectamente a tu anatomía y estilo de vida.",
+    href: "#",
     cta: "Ver más",
     background: (
       <img
@@ -17,13 +17,13 @@ const features = [
         className="absolute opacity-60"
       />
     ),
-    className: "#",
+    className: "",
   },
   {
     Icon: InputIcon,
     name: "Prótesis de Miembro Superior",
     description:
-      "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
+      "Desarrollamos prótesis de brazo y mano con tecnología avanzada, diseñadas para recuperar la funcionalidad y naturalidad de tus movimientos. Cada prótesis está personalizada para tu máximo confort.",
     href: "#",
     cta: "Ver más",
     background: (
@@ -39,7 +39,7 @@ const features = [
     Icon: GlobeIcon,
     name: "Prótesis Estéticas",
     description:
-      "Amet sit id reprehenderit cupidatat dolore culpa minim officia cillum duis reprehenderit deserunt sint.",
+      "Creamos prótesis estéticas de aspecto totalmente natural, reproduciendo fielmente el color, textura y detalles de tu piel. Una solución personalizada que combina belleza y comodidad.",
     href: "#",
     cta: "Ver más",
     background: (
@@ -48,7 +48,7 @@ const features = [
         className="absolute opacity-60"
       />
     ),
-    className: "¿",
+    className: "",
   },
 ];
 
@@ -59,9 +59,9 @@ export default function Services() {
         <h5 className="text-2xl font-medium text-blue-600">
           Nuestros Servicios
         </h5>
-        <h1 className="text-3xl lg:text-5xl text-mons font-semibold leading-tight text-center pb-7">
-          Ofrecemos Servicios según <br /> tus necesidades
-        </h1>
+        <h2 className="text-3xl lg:text-5xl text-mons font-semibold leading-tight text-center pb-7">
+          Te ofrecemos una prótesis a tu medida
+        </h2>
         <BentoGrid className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature) => (
             <BentoCard key={feature.name} {...feature} />
