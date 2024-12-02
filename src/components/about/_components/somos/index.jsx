@@ -26,20 +26,25 @@ export default function SomosSection() {
           </figure>
         </div>
         <div className="flex flex-col gap-5 md:ms-5 md:text-left bg-white">
-          <h5 className="text-lg lg:text-2xl font-medium text-blue-600">
-            ¿Quienes Somos?
-          </h5>
+          <h1 className="text-lg lg:text-2xl font-medium text-blue-600">
+            KYP Bioingeniería
+          </h1>
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl lg:text-5xl text-mons font-semibold leading-relaxed">
-              Somos KYP Bioingeniería
+              Innovando en Prótesis en Perú desde 2018
             </h2>
           </div>
           <p className="leading-snug text-[#676767] py-5">
-            Minim ipsum ea et ad sunt nisi aute. Nostrud velit ullamco ipsum
-            cupidatat. Veniam sit anim velit reprehenderit Lorem irure pariatur
-            in. Esse in qui sint incididunt amet pariatur adipisicing duis culpa
-            culpa. Veniam reprehenderit culpa quis reprehenderit in proident id
-            sint consequat cillum amet duis laboris voluptate.
+            KYP Bioingeniería nació con la visión de mejorar la calidad de vida
+            de las personas con discapacidad física, enfocándose en brindar
+            soluciones innovadoras y personalizadas. Desde sus inicios, la
+            empresa ha trabajado para posicionarse como un referente en el
+            sector de prótesis en Perú. Con un enfoque en la excelencia y la
+            innovación tecnológica, KYP Bioingeniería ha ampliado su alcance,
+            ofreciendo prótesis de pierna, brazo y estéticas a pacientes de todo
+            el país. Su trayectoria se caracteriza por un compromiso constante
+            con la mejora continua, logrando combinar la tecnología avanzada con
+            un trato humano y empático que distingue a la empresa.
           </p>
 
           <ul className="space-y-4">

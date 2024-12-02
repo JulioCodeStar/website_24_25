@@ -1,4 +1,4 @@
-import { SomosSection, HabilitySEction, MissionVisionSection } from "@/components/about/_components";
+import { SomosSection, HabilitySEction, MissionVisionSection, ValoresSection } from "@/components/about/_components";
 
 export default function Nosotros() {
   return (
@@ -6,6 +6,7 @@ export default function Nosotros() {
         <SomosSection />
         <HabilitySEction />
         <MissionVisionSection />
+        <ValoresSection /> 
     </>
   )
 }
