@@ -1,6 +1,6 @@
-import localFont from "next/font/local";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
+import { ProviderStore } from '@/store/providers'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -18,7 +18,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.className}`}
       >
+        <ProviderStore>
         {children}
+        </ProviderStore>
       </body>
     </html>
   );

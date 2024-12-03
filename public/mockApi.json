@@ -1,0 +1,43 @@
+{
+    "servicios": [
+      {
+        "slug": "protesis-de-pierna",
+        "nombre": "Prótesis de Pierna",
+        "descripcion": "Prótesis para miembros inferiores.",
+        "trabajos": [
+          {
+            "slug": "protesis-transfemoral",
+            "nombre": "Prótesis Transfemoral",
+            "descripcion": "Prótesis Transfemoral económica y funcional.",
+            "imagen": "/images/tranfemoral.jpg"
+          },
+          {
+            "slug": "protesis-transtibial",
+            "nombre": "Prótesis Transtibial",
+            "descripcion": "Prótesis Transtibial ligera y cómoda.",
+            "imagen": "/images/transtibial.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "protesis-bionicas",
+        "nombre": "Prótesis Biónicas",
+        "descripcion": "Prótesis avanzadas para mayor funcionalidad.",
+        "trabajos": [
+          {
+            "slug": "mano-parcial-bionica",
+            "nombre": "Mano Parcial Biónica",
+            "descripcion": "Prótesis parcial de mano con tecnología biónica.",
+            "imagen": "/images/mano-parcial-bionica.jpg"
+          },
+          {
+            "slug": "mano-completa-bionica",
+            "nombre": "Mano Completa Biónica",
+            "descripcion": "Prótesis de mano completa con funcionalidad avanzada.",
+            "imagen": "/images/mano-completa-bionica.jpg"
+          }
+        ]
+      }
+    ]
+  }
+  
