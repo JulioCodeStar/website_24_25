@@ -1,4 +1,13 @@
-import { HeaderSection, InfoSection, ProcesosSection } from "@/components/services";
+import { 
+  HeaderSection, 
+  InfoSection, 
+  ProcesosSection, 
+  ProductsSection,
+  MarcasSection,
+  TeamSection,
+  FaqServicesSection,
+  Subscription
+} from "@/components/services";
 
 export default function Servicio() {
   return (
@@ -6,6 +15,11 @@ export default function Servicio() {
       <HeaderSection />
       <InfoSection />
       <ProcesosSection />
+      <ProductsSection />
+      {/* <MarcasSection /> */}
+      <TeamSection />
+      <FaqServicesSection />
+      <Subscription />        
     </>
   );
 }
