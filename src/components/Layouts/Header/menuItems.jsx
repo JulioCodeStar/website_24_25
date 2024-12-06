@@ -19,7 +19,23 @@ export default function MenuItems() {
 
   const { data , error, isLoadin, isFetching } = useGetMenuItemsQuery(null);
 
-  if (error) return <div>Error</div>;
+  if (error) {
+    console.log('Error Details:', error);
+    
+    if ('status' in error) {
+      // Es un error relacionado con la red o la respuesta del servidor
+      console.log('Status Code:', error.status);
+      if (error.data) {
+        console.log('Error Data:', error.data);
+      }
+    } else {
+      // Error genérico (e.g., un throw en la baseQuery)
+      console.log('Generic Error:', error.message);
+    }
+  
+    return <div>Error: {error.message || 'An error occurred'}</div>;
+  }
+  
 
   if (isLoadin || isFetching) return <div>Loading...</div>;
   
