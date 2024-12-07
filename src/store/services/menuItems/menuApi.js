@@ -7,7 +7,7 @@ export const menuApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: 'http://localhost:1337/api/',
         prepareHeaders: (headers, { getState }) => {
-            const token = 'e7fb5414d45c565f5f2da58cd128f9b684166ffb5ad82761a08f7886aa132fe4afdad847c46a309fca6ac8bb47aa56f04f14b1fe842db4bb1da81afe2fb6270b91e5ea980950f1e9487b79fbf586246667133a0462c6467ea9d484e7b96b44e316c73d32f63b8324a89c86369f792fa06ca564659d3a962fce238ad0d538a39e'
+            const token = '9b3fc3a16a01f1cb2a6a89c88b7c63e740fcfd3c0322de1ab23c551e8d0fab4a1133ff0832b73d5192a0313b82e61577af0d952611f2224946eb1d07ecf03d28373336040feb7485970d859d101db50894181303be0c068aa429217f27556e00ca5306cdd710b93da6f4eafba8b34ac2a1bd72edff00b330c5420e20097c19e1'
             if (token) {
                 headers.set('Authorization', `Bearer ${token}`)
             }
