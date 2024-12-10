@@ -1,25 +1,65 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import HeaderBanner from "./header-baner";
 import MenuMobile from "./menu-mobile";
-import { useGetMenuItemsQuery } from "@/store/services/menuItems/menuApi";
 import MenuItems from "./menuItems";
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [bannerHeight, setBannerHeight] = useState(0);
+
+  useEffect(() => {
+    const banner = document.getElementById("header-banner");
+    if (banner) {
+      setBannerHeight(banner.offsetHeight);
+    }
+
+    const handleScroll = () => {
+      if (window.scrollY > bannerHeight) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [bannerHeight]);
+
   return (
     <>
-      <HeaderBanner />
-      <section className="relative w-full">
+      <HeaderBanner id="header-banner" />
+      <section
+        className={`sticky transition-all duration-300 ease-in-out z-50 ${
+          isScrolled
+            ? "top-0 bg-white shadow-lg"
+            : `top-[${bannerHeight}px] bg-white`
+        }`}
+        style={{ top: isScrolled ? 0 : bannerHeight }}
+      >
         <div className="max-w-[1320px] mx-auto">
-          <div className="flex items-center justify-between gap-2 p-4 xl:py-5">
+          <div
+            className={`flex items-center justify-between gap-2 p-4 xl:py-5 transition-all duration-300 ease-in-out ${
+              isScrolled ? "py-4" : "py-2"
+            }`}
+          >
             <img
               src="/img/encabezado.png"
               alt="Logo Principal"
               className="w-24 md:w-32"
             />
-           <MenuItems />
+            <MenuItems />
             <div className="flex items-center gap-1">
-              <Button className="bg-device-600 hover:bg-device-500 rounded-full p-6">
+              <Button
+                className={`bg-device-600 hover:bg-device-500 rounded-full transition-all duration-300 ease-in-out ${
+                  isScrolled ? "p-4 text-sm" : "p-6"
+                }`}
+              >
                 Contáctenos
               </Button>
 
