@@ -5,6 +5,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+	"./node_modules/flyonui/dist/js/*.js"
   ],
   theme: {
   	extend: {
@@ -113,6 +114,8 @@ module.exports = {
   },
   plugins: [
 	require("tailwindcss-animate"),
-	require('tailwind-scrollbar')({ nocompatible: true })
+	require('tailwind-scrollbar')({ nocompatible: true }),
+	require("flyonui"),
+    require("flyonui/plugin")
   ],
 };

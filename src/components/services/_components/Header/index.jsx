@@ -3,13 +3,16 @@
 
 export default function HeaderSection() {
   return (
-    <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-screen overflow-hidden">
-      <img
-        src="https://placehold.co/1920x1080/png"
-        alt="Hero Background"
-        className="absolute inset-0 w-full h-full object-cover"
-        loading="eager"
-      />
+    <section className="relative h-[400px] w-full overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://placehold.co/1920x1080/jpg')",
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
     </section>
   )
 }

@@ -15,7 +15,6 @@ export default function HomeLayout({ children }) {
           <Header />
         )
       }
-      
         <div className="flex-grow">{children}</div>
       <Footer />
     </main>

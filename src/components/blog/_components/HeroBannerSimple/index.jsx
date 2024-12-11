@@ -1,10 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight } from "lucide-react";
 
-export default function HeaderSection() {
+export default function HeroBannerSimpleSection() {
   return (
-    <section className="relative h-[400px] w-full overflow-hidden">
+    <section className="relative h-[300px] w-full overflow-hidden ">
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -18,16 +18,16 @@ export default function HeaderSection() {
       {/* Content */}
       <div className="relative flex h-full flex-col items-center justify-center px-4 text-white">
         <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-        Prótesis Transfemoral / Transtibial
+          Blog Grid
         </h1>
 
         {/* Breadcrumb */}
         <nav className="flex items-center space-x-2 text-sm md:text-base">
           <Link href="/" className="text-device-700 hover:text-device-600">
-            Inicio
+            Blog
           </Link>
           <ChevronRight className="h-4 w-4" />
-          <span>Prótesis Transfemoral / Transtibial</span>
+          <span>Simple Blog Grid</span>
         </nav>
       </div>
     </section>
