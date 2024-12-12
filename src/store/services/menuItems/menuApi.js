@@ -20,4 +20,4 @@ export const menuApi = createApi({
   }),
 });
 
-export const { useGetMenuItemsQuery } = menuApi;
+export const { useGetMenuItemsQuery, usePrefetch } = menuApi;

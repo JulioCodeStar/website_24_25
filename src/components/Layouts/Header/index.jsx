@@ -5,10 +5,19 @@ import { Button } from "@/components/ui/button";
 import HeaderBanner from "./header-baner";
 import MenuMobile from "./menu-mobile";
 import MenuItems from "./menuItems";
+import { usePrefetch } from "@/store/services/menuItems/menuApi";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [bannerHeight, setBannerHeight] = useState(0);
+  const prefetchMenuItems = usePrefetch("getMenuItems");
+
+
+  useEffect(() => {
+    // Prefetch del menú al cargar el componente
+    prefetchMenuItems();
+  }, [prefetchMenuItems]);
+  
 
   useEffect(() => {
     const banner = document.getElementById("header-banner");
@@ -35,9 +44,9 @@ export default function Header() {
     <>
       <HeaderBanner id="header-banner" />
       <section
-        className={`sticky transition-all duration-300 ease-in-out z-50 ${
+        className={`sticky transition-all duration-300 ease-in-out z-50 bg-white ${
           isScrolled
-            ? "top-0 bg-white shadow-lg"
+            ? "top-0 shadow-lg"
             : `top-[${bannerHeight}px] `
         }`}
         style={{ top: isScrolled ? 0 : bannerHeight }}
