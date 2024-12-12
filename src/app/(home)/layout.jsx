@@ -10,11 +10,12 @@ export default function HomeLayout({ children }) {
 
   return (
     <main className="min-h-screen flex flex-col justify-between relative text-mons">
-      {
+      {/* {
         !isHome && (
           <Header />
         )
-      }
+      } */}
+      <Header />
         <div className="flex-grow">{children}</div>
       <Footer />
     </main>

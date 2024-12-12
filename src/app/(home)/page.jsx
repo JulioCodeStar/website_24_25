@@ -1,4 +1,5 @@
 import { 
+  HeroSection,
   AboutSection, 
   BlogSection, 
   ChooseSection, 
@@ -13,7 +14,8 @@ import { HeaderHome } from "@/components/Layouts";
 export default function Home() {
   return (
     <>
-      <HeaderHome />
+      {/* <HeaderHome /> */}
+      <HeroSection />
       <AboutSection />
       <ServicesSection /> 
       <ChooseSection />

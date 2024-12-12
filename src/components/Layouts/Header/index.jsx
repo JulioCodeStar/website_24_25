@@ -38,7 +38,7 @@ export default function Header() {
         className={`sticky transition-all duration-300 ease-in-out z-50 ${
           isScrolled
             ? "top-0 bg-white shadow-lg"
-            : `top-[${bannerHeight}px] bg-white`
+            : `top-[${bannerHeight}px] `
         }`}
         style={{ top: isScrolled ? 0 : bannerHeight }}
       >
@@ -57,7 +57,7 @@ export default function Header() {
             <div className="flex items-center gap-1">
               <Button
                 className={`bg-device-600 hover:bg-device-500 rounded-full transition-all duration-300 ease-in-out ${
-                  isScrolled ? "p-4 text-sm" : "p-6"
+                  isScrolled ? "p-6 text-sm" : "p-6"
                 }`}
               >
                 Contáctenos

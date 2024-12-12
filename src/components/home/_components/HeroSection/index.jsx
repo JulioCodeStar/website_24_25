@@ -5,7 +5,7 @@ import CardInfo from "./card-info";
 export default function HeroSections() {
   return (
     <>
-      <section className="bg-transparent relative w-full py-8 flex justify-center flex-col items-center">
+      <section className="bg-[url('/img/img_hero.png')] bg-no-repeat bg-cover bg-bottom relative w-full py-16 flex justify-center flex-col items-center">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 max-w-[1320px] w-full">
           <div className="flex flex-col gap-2 lg:w-1/2 p-3 lg:text-left">
             <h1 className="text-lg lg:text-xl text-blue-700 mb-4">
