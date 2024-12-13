@@ -49,7 +49,10 @@ const counts = [
   },
 ];
 
-export default function Choose() {
+export default function Choose({ data }) {
+
+  console.log(data);
+  
   return (
     <>
       <section className="relative pt-[114px] pb-[160px] bg-device-950 w-screen overflow-x-hidden px-3">
@@ -61,10 +64,10 @@ export default function Choose() {
               <div>
                 <div className="relative mb-12">
                   <span className="pb-4 text-white text-2xl">
-                    ¿Por qué elegirnos?
+                    {data.etiqueta}
                   </span>
                   <h2 className="text-white text-3xl lg:text-5xl font-bold leading-snug py-4">
-                    Elige lo mejor opción para tu bienestar con tu prótesis
+                    {data.titulo}
                   </h2>
                 </div>
                 <div className="flex flex-wrap mt-[30px] lg:mr-[-calc(-0.5*30px)] lg:ml-[-calc(-0.5*30px)]">

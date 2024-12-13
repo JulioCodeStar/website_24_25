@@ -27,13 +27,13 @@ export default async function Home() {
   const renderSection = (section) => {
     switch (section.__component) {
       case "component-home.header-section":
-        return <HeroSection data={section} />;
+        return <HeroSection key={section.id} data={section} />;
       case "component-home.about-section":
         return <AboutSection data={section} />;
       case "component-home.our-services-section":
         return <ServicesSection data={section} />;
       case "component-home.choose-section":
-        return <ChooseSection data={section} />;
+        return <ChooseSection  data={section} />;
       // case "component-home.our-team-section":
       //   return <TeamSection key={section.id} data={section} />;
       // case "component-home.testomonios-section":

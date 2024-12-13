@@ -52,19 +52,32 @@ const features = [
   },
 ];
 
-export default function Services() {
+export default function Services({ data }) {
+  const background = (
+    
+    <img
+      src="https://placehold.co/600x600/png"
+      className="absolute opacity-60"
+    />
+  );
+
   return (
     <section className="bg-white py-28">
       <div className="max-w-[1320px] mx-auto flex flex-col justify-center items-center gap-6 px-6">
-        <h5 className="text-2xl font-medium text-blue-600">
-          Nuestros Servicios
-        </h5>
+        <h5 className="text-2xl font-medium text-blue-600">{data.etiqueta}</h5>
         <h2 className="text-3xl lg:text-5xl text-mons font-semibold leading-tight text-center pb-7">
-          Te ofrecemos una prótesis a tu medida
+          {data.titulo}
         </h2>
         <BentoGrid className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => (
-            <BentoCard key={feature.name} {...feature} />
+          {data.Card_Info.map((feature) => (
+            <BentoCard
+              key={feature.id}
+              description={feature.descripcion}
+              name={feature.titulo}
+              href={feature.url}
+              Icon={GlobeIcon}
+              cta={"Ver más"}
+            />
           ))}
         </BentoGrid>
       </div>
