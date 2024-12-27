@@ -11,29 +11,39 @@ import {
 
 const faqs = [
   {
-    question: "¿Qué es Next.js?",
+    question: "¿Cuál es el proceso de elaboración? ",
     answer:
-      "Next.js es un framework de React que permite funcionalidades como renderizado del lado del servidor y generación de sitios estáticos para aplicaciones web basadas en React.",
+      "Seguimos un proceso meticuloso de 6 pasos que incluye: evaluación inicial, toma de medidas y molde, pruebas de alineación, ajustes finales, entrega y seguimiento post entrega.",
   },
   {
-    question: "¿Cómo instalo Tailwind CSS en mi proyecto Next.js?",
+    question: "¿La prótesis incluye rehabilitación?",
     answer:
-      "Puedes instalar Tailwind CSS en tu proyecto Next.js ejecutando 'npm install tailwindcss postcss autoprefixer', luego inicializando Tailwind con 'npx tailwindcss init -p', y finalmente configurando tus archivos de configuración.",
+      "Sí, nuestro proceso incluye rehabilitación tanto pre como post protésica para garantizar los mejores resultados y adaptación.",
   },
   {
-    question: "¿Qué es shadcn/ui?",
+    question: "¿La prótesis requiere mantenimiento?",
     answer:
-      "shadcn/ui es una colección de componentes de interfaz de usuario reutilizables y accesibles, construidos con Radix UI y Tailwind CSS, diseñados para ser fácilmente personalizables e integrables en proyectos de React.",
+      "Sí, recomendamos revisiones periódicas para asegurar el óptimo funcionamiento y durabilidad de su prótesis. El programa de mantenimiento se establece según su tipo de prótesis y nivel de actividad.",
   },
   {
-    question: "¿Puedo usar TypeScript con Next.js?",
+    question: "¿Cómo sé qué tipo de prótesis es la adecuada para mí? ",
     answer:
-      "Sí, Next.js tiene soporte integrado para TypeScript. Puedes comenzar a usar TypeScript en tu proyecto Next.js simplemente cambiando tus archivos .js a .ts o .tsx.",
+      "Nuestro equipo de especialistas realiza una evaluación completa considerando su nivel de amputación, estilo de vida, actividades diarias y objetivos personales para recomendar la mejor opción.",
   },
   {
-    question: "¿Cómo puedo desplegar mi aplicación Next.js?",
+    question: "¿Puedo hacer deporte con mi prótesis?",
     answer:
-      "Hay varias formas de desplegar una aplicación Next.js. Una de las más sencillas es usar Vercel, la plataforma creada por los creadores de Next.js. También puedes desplegar en otras plataformas como Netlify, AWS, o tu propio servidor.",
+      "Sí, ofrecemos prótesis especializadas para actividades específicas. Durante su evaluación, discutiremos sus objetivos deportivos para determinar la mejor solución.",
+  },
+  {
+    question: "¿Cuánto tiempo toma adaptarse a una nueva prótesis?",
+    answer:
+      "El tiempo de adaptación varía según cada persona, pero generalmente toma entre 4-8 semanas. Nuestro programa de rehabilitación está diseñado para optimizar este proceso.",
+  },
+  {
+    question: "¿Con qué frecuencia necesito reemplazar mi prótesis?",
+    answer:
+      "La durabilidad depende de varios factores como el tipo de prótesis, nivel de actividad y cuidado. Generalmente, se recomienda una evaluación cada 3-5 años para considerar un reemplazo.",
   },
 ];
 

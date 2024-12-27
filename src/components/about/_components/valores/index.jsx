@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 
 /* eslint-disable @next/next/no-img-element */
@@ -24,30 +25,32 @@ const items = [
   }
 ];
 
-export default function ValoresSection() {
+export default function ValoresSection({ data }) {
   return (
     <section className="relative bg-[#F4F3F8] shadow-black w-full py-16 lg:py-24 lg:px-[120px] ">
       <div className="hidden lg:block bg-[url('/img/shape10.png')] absolute top-0 right-0 w-[378px] h-[350px] bg-no-repeat"></div>
       <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 px-6 gap-8 lg:gap-12 items-center">
         <div className="flex justify-center">
-          <img
-            src="https://placehold.co/600x600"
-            alt=""
+          <Image
+            src={data?.img ? data.img : "https://placehold.co/600/png"}
+            width={600}
+            height={600}
+            alt="Imagen de Valores"
             className="w-full max-w-[600px] h-auto"
           />
         </div>
         <div className="flex flex-col gap-5 md:ms-5 md:text-left">
           <h1 className="text-lg lg:text-2xl font-medium text-blue-600">
-            Valores
+            {data.etiqueta}
           </h1>
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl lg:text-5xl text-mons font-semibold leading-loose">
-              Nuestros valores distintivos
+              {data.titulo}
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-mons pt-4">
-            {items.map((item, index) => (
-              <div key={index} className="flex flex-col gap-2">
+            {data.List.map((item) => (
+              <div key={item.id} className="flex flex-col gap-2">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 flex justify-center items-center bg-white rounded-full h-8 w-8 shadow-md">
                     <FaCheck className="text-blue-600" />

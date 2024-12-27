@@ -128,7 +128,7 @@ export default function MenuItems() {
               <>
                 <div className="relative group px-3 py-2">
                   <button className="flex items-center gap-x-2 hover:opacity-50 cursor-default">
-                    Servicios
+                    {item.title}
                     <ChevronDown className="w-4 h-4" />
                   </button>
                   <div className="absolute top-0 -left-72 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[760px]">

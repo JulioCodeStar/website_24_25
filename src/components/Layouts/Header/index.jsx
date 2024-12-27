@@ -1,62 +1,61 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import HeaderBanner from "./header-baner";
 import MenuMobile from "./menu-mobile";
 import MenuItems from "./menuItems";
-import { usePrefetch } from "@/store/services/menuItems/menuApi";
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [bannerHeight, setBannerHeight] = useState(0);
-  const prefetchMenuItems = usePrefetch("getMenuItems");
+  const [isFixed, setIsFixed] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const controls = useAnimation();
 
+  const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY;
+    const scrollingUp = currentScrollY < lastScrollY;
+    const scrollThreshold = 100; // Adjust this value as needed
 
-  useEffect(() => {
-    // Prefetch del menú al cargar el componente
-    prefetchMenuItems();
-  }, [prefetchMenuItems]);
-  
-
-  useEffect(() => {
-    const banner = document.getElementById("header-banner");
-    if (banner) {
-      setBannerHeight(banner.offsetHeight);
+    if (currentScrollY <= scrollThreshold) {
+      setIsFixed(false);
+      controls.start("visible");
+    } else if (scrollingUp) {
+      setIsFixed(true);
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
 
-    const handleScroll = () => {
-      if (window.scrollY > bannerHeight) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+    setLastScrollY(currentScrollY);
+  }, [lastScrollY, controls]);
 
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [bannerHeight]);
+  useEffect(() => {
+    // Ensure the menu is visible when the component mounts
+    controls.start("visible");
+  }, [controls]);
+
+  const variants = {
+    visible: { y: 0, opacity: 1, transition: { duration: 0.3, ease: "easeOut" } },
+    hidden: { y: "-100%", opacity: 0, transition: { duration: 0.3, ease: "easeIn" } }
+  };
 
   return (
     <>
       <HeaderBanner id="header-banner" />
-      <section
-        className={`sticky transition-all duration-300 ease-in-out z-50 bg-white ${
-          isScrolled
-            ? "top-0 shadow-lg"
-            : `top-[${bannerHeight}px] `
-        }`}
-        style={{ top: isScrolled ? 0 : bannerHeight }}
+      <motion.section
+        initial="visible"
+        animate={controls}
+        variants={variants}
+        className={`z-50 bg-white ${isFixed ? "fixed top-0 left-0 right-0 shadow-lg" : "relative"}`}
       >
         <div className="max-w-[1320px] mx-auto">
-          <div
-            className={`flex items-center justify-between gap-2 p-4 xl:py-5 transition-all duration-300 ease-in-out ${
-              isScrolled ? "py-4" : "py-2"
-            }`}
-          >
+          <div className="flex items-center justify-between gap-2 p-4 xl:py-5">
             <img
               src="/img/encabezado.png"
               alt="Logo Principal"
@@ -64,19 +63,15 @@ export default function Header() {
             />
             <MenuItems />
             <div className="flex items-center gap-1">
-              <Button
-                className={`bg-device-600 hover:bg-device-500 rounded-full transition-all duration-300 ease-in-out ${
-                  isScrolled ? "p-6 text-sm" : "p-6"
-                }`}
-              >
+              <Button className="bg-device-600 hover:bg-device-500 rounded-full p-6">
                 Contáctenos
               </Button>
-
               <MenuMobile />
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
+

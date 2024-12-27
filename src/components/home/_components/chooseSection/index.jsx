@@ -49,10 +49,7 @@ const counts = [
   },
 ];
 
-export default function Choose({ data }) {
-
-  console.log(data);
-  
+export default function Choose({ data }) {  
   return (
     <>
       <section className="relative pt-[114px] pb-[160px] bg-device-950 w-screen overflow-x-hidden px-3">

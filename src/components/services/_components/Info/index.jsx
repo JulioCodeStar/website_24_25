@@ -4,13 +4,13 @@ import { FaCheck } from "react-icons/fa";
 
 const items = [
   {
-    title: "Ex ipsum tempor veniam non eiusmod laboris eu elit aliquip nostrud labore tempor nisi.",
+    title: "Personalización",
   },
   {
-    title: "Mollit laborum qui nostrud ea cillum culpa adipisicing qui ea mollit non nulla aute.",
+    title: "Funcionalidad",
   },
   {
-    title: "Commodo anim voluptate cupidatat tempor eiusmod eu dolor non laborum id culpa.",
+    title: "Comodidad",
   },
 ];
 
@@ -31,11 +31,11 @@ export default function InfoSection() {
           </h1>
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl lg:text-5xl text-mons font-semibold leading-relaxed">
-              Protesis de Pierna / Bionica / Estética
+              ¿Que es un prótesis de pierna?
             </h2>
           </div>
           <p className="leading-snug text-[#676767] py-5">
-            Ea ullamco aliquip in laborum excepteur ex do et commodo labore duis nulla. Sint laborum nulla mollit aliquip adipisicing mollit qui et laborum nostrud do eiusmod aliquip. Enim laboris do magna non cupidatat aliquip eiusmod veniam. Laborum mollit aliqua nisi et nisi eu dolore sunt incididunt officia quis fugiat ipsum aliqua. Id amet nostrud consequat Lorem culpa. Velit officia aute ut magna quis consectetur ipsum reprehenderit amet labore.
+            Una prótesis de pierna es un dispositivo médico personalizado diseñado para reemplazar una extremidad inferior perdida. Utilizamos tecnología de vanguardia para crear prótesis que no solo restauran la función, sino que también mejoran significativamente la calidad de vida de nuestros pacientes.
           </p>
 
           <ul className="space-y-4">

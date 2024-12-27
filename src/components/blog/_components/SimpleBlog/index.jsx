@@ -1,6 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Card, CardContent } from "@/components/ui/card";
+import { useBlogData } from "@/hooks/Blog/simpleBlog";
 
 const categories = [
   "Cardiology",
@@ -21,6 +25,10 @@ const archives = [
 ];
 
 export default function SimpleBlog() {
+  const pathname = usePathname();
+  const slug = pathname.split("/")[2];
+  const { data: blog, loading, error } = useBlogData(slug);
+
   return (
     <section className="relative py-28 px-4 md:px-8 lg:px-12">
       <div className="container mx-auto">
@@ -89,20 +97,33 @@ export default function SimpleBlog() {
           {/* Main Content */}
           <Card className="overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
             <CardContent className="p-0">
-              <figure className="relative h-auto w-full">
-                <img
-                  src="https://placehold.co/1000x400/svg"
-                  alt="Medical team meeting"
-                  className=""
-                />
-              </figure>
+              {
+                blog?.featured_image?.formats?.large?.url ?
+                (
+                  <Image
+                    src={blog?.featured_image?.formats?.large?.url}
+                    width={1000}
+                    height={400}
+                    alt={blog?.title || "Blog image"}
+                    className="w-full"
+                  />
+                ): (
+                  <p>No image available</p>
+                )
+              }
               <div className="p-6">
                 <div className="mb-4 flex items-center gap-4 text-sm text-gray-500">
-                  <span>Admin</span>
-                  <span>15 Jan 2022</span>
-                  <span>03 Comt</span>
+                  <span>{blog?.author}</span>
+                  <span>{new Date(blog?.date).toLocaleDateString()}</span>
                 </div>
                 <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">
+                  {blog?.title}
+                </h1>
+                <div
+                  className="content mt-6 leading-7"
+                  dangerouslySetInnerHTML={{ __html: blog?.content_editor }}
+                />
+                {/* <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">
                   What Causes Inherited Retinal Diseases?
                 </h1>
                 <p className="leading-7 [&:not(:first-child)]:mt-6">
@@ -139,12 +160,12 @@ export default function SimpleBlog() {
                   laborum commodo magna irure dolore in cillum do ea.
                 </p>
                 <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <figure className="relative rounded-xl">
-                        <img src="https://placehold.co/319x198/jpg" alt="" />
-                    </figure>
-                    <figure className="relative rounded-xl">
-                        <img src="https://placehold.co/319x198/jpg" alt="" />
-                    </figure>
+                  <figure className="relative rounded-xl">
+                    <img src="https://placehold.co/319x198/jpg" alt="" />
+                  </figure>
+                  <figure className="relative rounded-xl">
+                    <img src="https://placehold.co/319x198/jpg" alt="" />
+                  </figure>
                 </div>
                 <blockquote className="relative p-7 m-6">
                   <span className="icon-[tabler--quote] text-base-300/80 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0"></span>
@@ -153,12 +174,13 @@ export default function SimpleBlog() {
                     <p className="text-base-content/90 text-lg">
                       <em>
                         The blockquote element is ideal for showcasing
-                        well-known quotes within content. It(&apos)s commonly used for
-                        testimonials, reviews, and notable quotes in articles.
+                        well-known quotes within content. It(&apos)s commonly
+                        used for testimonials, reviews, and notable quotes in
+                        articles.
                       </em>
                     </p>
                   </div>
-                </blockquote>
+                </blockquote> */}
               </div>
             </CardContent>
           </Card>

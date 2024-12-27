@@ -2,25 +2,49 @@
 const sections = [
   {
     count: "01",
-    title: "Get Appoiment",
+    title: "Apoyo Emocional",
     description:
-      "Labore irure enim aliqua sit mollit enim amet Lorem Lorem quis duis cillum.",
+      "Evaluación inicial a caro del área de apoyo emocional.",
     imageUrl: "https://placehold.co/600x400",
     imagePosition: "left",
   },
   {
     count: "02",
-    title: "Start Check-Up",
+    title: "Rehabilitación Pre y Post Protésica",
     description:
-      "Consequat mollit excepteur adipisicing sit cupidatat est laborum sit.",
+      "Control del dolor y la inflamación del muñón antes de y despues de la prótesis",
     imageUrl: "https://placehold.co/600x400",
     imagePosition: "right",
   },
   {
     count: "03",
-    title: "Enjoy Healthy Life",
+    title: "Toma de Medidas",
     description:
-      "Labore nulla eu sit cillum do.",
+      "Toma de medidas con vendas y materiales especiales.",
+    imageUrl: "https://placehold.co/600x400",
+    imagePosition: "left",
+  },
+  {
+    count: "04",
+    title: "Prueba de Encaje",
+    description:
+      "Se ubica el muñón de forma exacta dentro del encaje",
+    imageUrl: "https://placehold.co/600x400",
+    imagePosition: "left",
+  },
+  {
+    count: "05",
+    title: "Prueba de Marcha",
+    description:
+      "Uso de la prótesis con encaje de prueba de 2 semanas",
+    imageUrl: "https://placehold.co/600x400",
+    imagePosition: "left",
+  },
+  {
+    count: "06",
+    title: "Socket Final",
+    description:
+      "Cambio del preencaje y entrega del encaje final.",
     imageUrl: "https://placehold.co/600x400",
     imagePosition: "left",
   },
@@ -31,9 +55,9 @@ export default function ProcesosSection() {
   return (
     <section className="relative py-16 lg:py-28 bg-[#F4F3F8]">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center gap-6">
-        <h5 className="text-2xl font-medium text-blue-600">Procesos</h5>
+        <h5 className="text-2xl font-medium text-blue-600">Nuestros Procesos de Atención</h5>
         <h2 className="text-3xl lg:text-5xl text-mons font-semibold leading-tight text-center pb-7">
-          Anim labore dolore adipisicing enim.
+          Creamos tu prótesis de pierna siguiendo un procedo meticuloso y personalizado
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sections.map((section, index) => (
